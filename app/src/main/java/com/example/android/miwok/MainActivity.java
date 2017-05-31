@@ -38,13 +38,10 @@ import android.view.ViewAnimationUtils;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.lang.reflect.Field;
-
-import static android.R.attr.id;
 
 public class MainActivity extends AppCompatActivity{
 
