@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BBB"
+    android:orientation="vertical"
+    tools:context="com.example.android.miwok.Main2Activity">
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_action_search"
+        android:onClick="button"
+        android:textColor="#BBB" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingRight="30dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="150dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="80dp"
+                android:text="Select City"
+                android:textSize="15sp"
+                android:textColor="#000"/>
+
+            <Spinner
+                android:id="@+id/city_spinner"
+                android:layout_width="150dp"
+                android:layout_alignParentRight="true"
+                android:layout_height="30dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Select College"
+                android:textSize="15sp"
+                android:paddingLeft="80dp"
+                android:layout_alignParentLeft="true"
+                android:textColor="#000"/>
+
+            <Spinner
+                android:id="@+id/college_spinner"
+                android:layout_alignParentRight="true"
+                android:layout_width="150dp"
+                android:layout_height="30dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Select Service"
+                android:layout_alignParentLeft="true"
+                android:textSize="15sp"
+                android:paddingLeft="80dp"
+                android:textColor="#000"/>
+
+            <Spinner
+                android:id="@+id/service_spinner"
+                android:layout_width="150dp"
+                android:paddingRight="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_height="30dp" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
