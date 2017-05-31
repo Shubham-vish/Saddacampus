@@ -1,6 +1,5 @@
-package com.example.android.miwok;
+package com.example.android.saddacampus;
 
-import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;

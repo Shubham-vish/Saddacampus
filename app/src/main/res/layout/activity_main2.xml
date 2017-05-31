@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#BBB"
     android:orientation="vertical"
-    tools:context="com.example.android.miwok.Main2Activity">
+    tools:context="com.example.android.saddacampus.Main2Activity">
 
     <TextView
         android:layout_width="100dp"

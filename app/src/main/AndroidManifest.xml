@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.miwok">
+    package="com.example.android.saddacampus">
 
     <application
         android:allowBackup="true"
@@ -22,7 +22,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity android:name="com.example.android.saddacampus.MainActivity"
             android:label="HomePage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +33,7 @@
         <activity
             android:name=".NumbersActivity"
             android:label="@string/category_numbers" />
-        <activity android:name=".Main2Activity"
+        <activity android:name="com.example.android.saddacampus.Main2Activity"
             android:label="SelectionActivity">
 
 

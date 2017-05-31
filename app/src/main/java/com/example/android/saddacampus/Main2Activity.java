@@ -1,4 +1,4 @@
-package com.example.android.miwok;
+package com.example.android.saddacampus;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,8 +8,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
-
-import static android.R.attr.button;
 
 public class Main2Activity extends AppCompatActivity{
 
