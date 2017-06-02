@@ -17,9 +17,9 @@
     <item
         android:id="@+id/actionNotifications"
         android:icon="@drawable/color_black"
-        android:menuCategory="secondary"
-        android:orderInCategory="1"
-        android:title="Cart"
-        app:actionLayout="@layout/cart"
-        app:showAsAction="always" />
-</menu>
+    android:menuCategory="secondary"
+    android:orderInCategory="1"
+    android:title="Cart"
+    app:actionLayout="@layout/cart"
+    app:showAsAction="always" />
+    </menu>

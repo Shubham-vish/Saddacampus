@@ -21,18 +21,21 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-
-public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHolder> {
-
-    private static final String TAG = GreenAdapter.class.getSimpleName();
-
-    private int mNumberItems;
+import java.util.ArrayList;
 
 
-    public GreenAdapter(int numberOfItems) {
-        mNumberItems = numberOfItems;
+public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.NumberViewHolder> {
+
+    private static final String TAG = CategoryAdapter.class.getSimpleName();
+
+  private ArrayList<Category> mCategoryList;
+
+
+    public CategoryAdapter(ArrayList<Category> c) {
+        mCategoryList=c;
     }
 
     @Override
@@ -58,7 +61,7 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
 
     @Override
     public int getItemCount() {
-        return mNumberItems;
+        return mCategoryList.size();
     }
 
 
@@ -66,17 +69,19 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
 
         // Will display the position in the list, ie 0 through getItemCount() - 1
         TextView listItemNumberView;
+        ImageView image;
 
 
         public NumberViewHolder(View itemView) {
             super(itemView);
-
+            image = (ImageView) itemView.findViewById(R.id.i) ;
             listItemNumberView = (TextView) itemView.findViewById(R.id.tv_item_number);
         }
 
 
         void bind(int listIndex) {
-            listItemNumberView.setText(String.valueOf(listIndex));
+            image.setImageResource(mCategoryList.get(listIndex).getImageId());
+            listItemNumberView.setText(mCategoryList.get(listIndex).getCategoryName());
         }
     }
 }

@@ -42,6 +42,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity{
     int count =0;
 
     public static final int NUM_LIST_ITEMS = 100;
-    private GreenAdapter mAdapter;
+    private CategoryAdapter mAdapter;
     private RecyclerView mNumberList;
 
     @Override
@@ -277,16 +278,26 @@ public class MainActivity extends AppCompatActivity{
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setSearchtollbar();
-
-
+        String Indian = "Indian";
+        //////////////////////////.........Categories Slider.........
+        ArrayList<Category> c=new ArrayList<Category>();
+        c.add(new Category(Indian, R.drawable.color_green));
+        c.add(new Category("Chinese", R.drawable.color_green));
+        c.add(new Category("Italian", R.drawable.color_green));
+        c.add(new Category("FF", R.drawable.color_green));
+        c.add(new Category("Cntntl", R.drawable.color_green));
+        c.add(new Category("Non_Veg", R.drawable.color_green));
+        c.add(new Category("Veg", R.drawable.color_green));
 
         ////Horizontal Scroller
         mNumberList = (RecyclerView)findViewById(R.id.rv_numbers);
         LinearLayoutManager la = new LinearLayoutManager(MainActivity.this,LinearLayoutManager.HORIZONTAL,false);
         mNumberList.setLayoutManager(la);
         mNumberList.setHasFixedSize(true);
-        mAdapter = new GreenAdapter(NUM_LIST_ITEMS);
+        mAdapter = new CategoryAdapter(c);
         mNumberList.setAdapter(mAdapter);
+        //>>>>>>>>>>>>>>>.............Categories Slider ends here.
+
         //////Horizontal Scroller
         ViewPager viewp = (ViewPager) findViewById(R.id.view_pager);
         SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(getSupportFragmentManager());
