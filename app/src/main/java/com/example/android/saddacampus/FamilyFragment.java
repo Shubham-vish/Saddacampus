@@ -6,7 +6,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -26,7 +28,7 @@ public class FamilyFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.word_list,container,false);
         // Create a list of words
-        ArrayList<Word> words = new ArrayList<Word>();
+        final ArrayList<Word> words = new ArrayList<Word>();
         words.add(new Word("father", "әpә", R.drawable.family_father));
         words.add(new Word("mother", "әṭa", R.drawable.family_mother));
         words.add(new Word("son", "angsi", R.drawable.family_son));
@@ -50,7 +52,14 @@ public class FamilyFragment extends Fragment {
         // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Word} in the list.
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
 
+                Toast.makeText(getContext(),words.get(position).getDefaultTranslation(),Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
         return rootView;
     }
 

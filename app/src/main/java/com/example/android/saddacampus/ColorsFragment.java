@@ -1,14 +1,22 @@
 package com.example.android.saddacampus;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import static android.R.attr.key;
+import static android.R.attr.onClick;
+import static android.R.attr.value;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,7 +34,7 @@ public class ColorsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.word_list,container,false);
         // Create a list of words
-        ArrayList<Word> words = new ArrayList<Word>();
+        final ArrayList<Word> words = new ArrayList<Word>();
         words.add(new Word("red", "weṭeṭṭi", R.drawable.color_red));
         words.add(new Word("mustard yellow", "chiwiiṭә", R.drawable.color_mustard_yellow));
         words.add(new Word("dusty yellow", "ṭopiisә", R.drawable.color_dusty_yellow));
@@ -48,6 +56,14 @@ public class ColorsFragment extends Fragment {
         // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Word} in the list.
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+
+                Toast.makeText(getContext(),words.get(position).getDefaultTranslation(),Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
         return rootView;
     }
 
