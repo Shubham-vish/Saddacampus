@@ -60,7 +60,8 @@ public class ColorsFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
 
                 Toast.makeText(getContext(),words.get(position).getDefaultTranslation(),Toast.LENGTH_SHORT).show();
-
+                Intent myIntent = new Intent(getActivity(), Main2Activity.class);
+                getActivity().startActivity(myIntent);
 
             }
         });
